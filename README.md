@@ -1,5 +1,5 @@
-![License](https://img.shields.io/github/license/bchilton9/update-wings-certs)
-![Last Commit](https://img.shields.io/github/last-commit/bchilton9/update-wings-certs)
+![License](https://img.shields.io/github/license/bchilton9/wings-cert-copy-from-npm)
+![Last Commit](https://img.shields.io/github/last-commit/bchilton9/wings-cert-copy-from-npm)
 ![Shell Script](https://img.shields.io/badge/made%20with-bash-1f425f.svg)
 
 # update-wings-certs.sh 🔐
