@@ -17,9 +17,9 @@ This script copies the actual .pem files (not symlinks), ensuring Wings always h
 ___
 
 ## ⚙️ How it works:
-	📤 Copies fullchain.pem and privkey.pem from NPM’s certificate directory
-	📥 Places them into Wings’ cert directory (like /etc/pterodactyl/certs)
-	🔄 Restarts Wings so it picks up the new certificates
+📤 Copies fullchain.pem and privkey.pem from NPM’s certificate directory
+📥 Places them into Wings’ cert directory (like /etc/pterodactyl/certs)
+🔄 Restarts Wings so it picks up the new certificates
 
 ___
 
