@@ -1,0 +1,1 @@
+Keeps Pterodactyl Wings’ SSL certificates up to date by copying them from Nginx Proxy Manager. Meant to be run once daily via cron.
