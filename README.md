@@ -13,9 +13,9 @@ This script copies the actual .pem files (not symlinks), ensuring Wings always h
 ___
 
 ## ⚙️ How it works:
-	•	📤 Copies fullchain.pem and privkey.pem from NPM’s certificate directory
-	•	📥 Places them into Wings’ cert directory (like /etc/pterodactyl/certs)
-	•	🔄 Restarts Wings so it picks up the new certificates
+	📤 Copies fullchain.pem and privkey.pem from NPM’s certificate directory
+	📥 Places them into Wings’ cert directory (like /etc/pterodactyl/certs)
+	🔄 Restarts Wings so it picks up the new certificates
 
 ___
 
@@ -24,6 +24,7 @@ ___
 Make sure to set the paths in the script:
 
 CERT_SRC=“/path/to/your/npm/certs”
+
 CERT_DST=“/etc/pterodactyl/certs/“
 
 ___
@@ -64,7 +65,7 @@ ___
 
 ## 📜 License
 
-MIT – free to use and modify. Not affiliated with Organizr, Theme Park, or any app mentioned.
+MIT – free to use and modify. Not affiliated with Pterodactyl Panel/Wings.
 
 ___
 
