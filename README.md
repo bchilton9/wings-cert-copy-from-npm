@@ -1,3 +1,7 @@
+![License](https://img.shields.io/github/license/bchilton9/update-wings-certs)
+![Last Commit](https://img.shields.io/github/last-commit/bchilton9/update-wings-certs)
+![Shell Script](https://img.shields.io/badge/made%20with-bash-1f425f.svg)
+
 # update-wings-certs.sh 🔐
 
 A simple script to keep Pterodactyl Wings’ SSL certificates updated from Nginx Proxy Manager.
