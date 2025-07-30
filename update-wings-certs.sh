@@ -9,7 +9,7 @@ cp "$CERT_SRC/fullchain.pem" "$CERT_DST/fullchain.pem"
 cp "$CERT_SRC/privkey.pem" "$CERT_DST/privkey.pem"
 
 chmod 600 "$CERT_DST"/*.pem
-chown 0:0 "$CERT_DST"/*.pem
+chown wings:wings "$CERT_DST"/*.pem
 
 # Optional: restart Wings
 systemctl restart wings
