@@ -1,12 +1,14 @@
 # update-wings-certs.sh
 
-A simple script to automatically update the SSL certificate used by the Pterodactyl Wings daemon based on the latest Nginx Proxy Manager (NPM) Let’s Encrypt certificates.
+A simple script to keep Pterodactyl Wings’ SSL certificates updated from Nginx Proxy Manager.
 
 ___
 
-## Purpose
+## Why this is needed:
 
-This script ensures that the Wings daemon uses the most up-to-date SSL certificates issued by Nginx Proxy Manager for secure panel-to-node communication over HTTPS.
+Nginx Proxy Manager (NPM) creates symlinks in /etc/letsencrypt/live/ that point to versioned files in /etc/letsencrypt/archive/.
+Pterodactyl Wings does not properly follow these symlinks, which can cause TLS connection failures after cert renewals.
+This script copies the actual .pem files (not symlinks), ensuring Wings always has a valid and direct copy.
 
 ___
 
@@ -22,7 +24,17 @@ ___
 Make sure to set the paths in the script:
 
 CERT_SRC=“/path/to/your/npm/certs”
-CERT_DST=“/path/to/store/your/wings/certs”
+CERT_DST=“/etc/pterodactyl/certs/“
+
+___
+
+## Wings must be configured to use the following paths or the paths in the script changed:
+
+SSL Certificate:
+/etc/pterodactyl/certs/fullchain.pem
+
+SSL Private Key:
+/etc/pterodactyl/certs/privkey.pem
 
 ___
 
@@ -35,7 +47,7 @@ sudo ./update-wings-certs.sh
 
 ___
 
-## Automatic usage with cron:
+## Automatic usage with cron (Optional):
 
 Edit root’s crontab:
 ```
@@ -45,16 +57,6 @@ Add this line to run it every day at 3:15 AM:
 ```
 15 3 * * * /root/update-wings-certs.sh
 ```
-
-___
-
-## Wings must be configured to use the following paths or the paths in the script changed:
-
-SSL Certificate:
-/etc/pterodactyl/certs/fullchain.pem
-
-SSL Private Key:
-/etc/pterodactyl/certs/privkey.pem
 
 ___
 
